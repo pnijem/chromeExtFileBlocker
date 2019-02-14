@@ -1,0 +1,11 @@
+{"name": "File Download Controller",
+ "description": "A Chrome extension for monitoring and allowing/blocking file downloads",
+ "version": "1.0",
+ "background": {
+   "scripts": ["jquery-3.3.1.min.js","bgEvent.js"],
+   "persistent": false
+ },
+ "options_page": "options.html",
+ "permissions": ["downloads", "https://l0ypwxusle.execute-api.ap-south-1.amazonaws.com/test/*"],
+ "content_security_policy": "script-src 'self'; object-src 'self'",
+ "manifest_version": 2}

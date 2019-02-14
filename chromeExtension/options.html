@@ -1,1 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Download Filename Controller</title>
+    <script src="options.js"></script>
 
+  </head>
+  <body>
+    <table id=rules></table>
+    <button id=new>New Rule</button>
+    <table hidden>
+      <tr id=rule-template hidden>
+        <td>
+          <select class=fileTypeSlector>
+            <option value=fileType>File Type</option>
+          </select>
+          <input type=text class=ext-param>
+          <select class=action>
+            <option value=block>Block File Download</option>
+          </select>
+        </td>
+        <td><span class=nowrap><input type=checkbox class=enabled checked>
+            <label class=enabled-label>Enabled</label></span>
+          <button class=remove>Remove Rule</button>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
