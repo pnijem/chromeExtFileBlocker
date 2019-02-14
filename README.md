@@ -12,4 +12,4 @@
 
 * Click on details and open extension options
 
-![alt text](/resources/images/extension_options.PNG)
+![alt text](/resources/images/extension_options.png)
