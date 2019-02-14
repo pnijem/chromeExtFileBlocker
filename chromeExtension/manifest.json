@@ -6,6 +6,6 @@
    "persistent": false
  },
  "options_page": "options.html",
- "permissions": ["downloads", "https://l0ypwxusle.execute-api.ap-south-1.amazonaws.com/test/*"],
+ "permissions": ["downloads", "https://e60eb57tz8.execute-api.us-east-2.amazonaws.com/beta/fileblocker/*"],
  "content_security_policy": "script-src 'self'; object-src 'self'",
  "manifest_version": 2}

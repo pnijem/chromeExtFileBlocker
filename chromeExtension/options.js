@@ -9,7 +9,7 @@ Rule.prototype.getElement = function(name) {
   return document.querySelector('#' + this.node.id + ' .' + name);
 }
 
-Rule.next_id = 0;
+Rule.next_id = 0; //Global Rule ids counter
 
 function loadRules() {
   var rules = localStorage.rules;
@@ -26,7 +26,7 @@ function loadRules() {
 
 function Rule(data) {
   var rules = document.getElementById('rules');
-  this.node = document.getElementById('rule-template').cloneNode(true);
+  this.node = document.getElementById('rule-template').cloneNode(true); //deep cloning - also the children of the node should also be cloned
   this.node.id = 'rule' + (Rule.next_id++);
   this.node.rule = this;
   rules.appendChild(this.node);
@@ -58,14 +58,14 @@ function Rule(data) {
   storeRules();
 }
 
-
+//map each existing Rule to a new Rule Object
 function storeRules() {
-  localStorage.rules = JSON.stringify(Array.prototype.slice.apply(
-    document.getElementById('rules').childNodes).map(function(node) {
-
+  localStorage.rules = JSON.stringify(Array.prototype.slice.apply(document.getElementById('rules').childNodes).
+  map(function(node) {
     return {fileTypeSlector: node.rule.getElement('fileTypeSlector').value,
             ext_param: node.rule.getElement('ext-param').value,
             action: node.rule.getElement('action').value,
-            enabled: node.rule.getElement('enabled').checked};
+            enabled: node.rule.getElement('enabled').checked
+          };
   }));
 }

@@ -21,10 +21,11 @@ function Factory() { //Factory of FileExtension Objects
                   'Access-Control-Allow-Origin' : '*',
                   'Access-Control-Allow-Credentials' : true
             },
-            url: "https://l0ypwxusle.execute-api.ap-south-1.amazonaws.com/test" + extension.resource,
+			url: "https://e60eb57tz8.execute-api.us-east-2.amazonaws.com/beta/fileblocker/isexecutable",
             data: JSON.stringify(item.url),
             dataType: "text",
             success: function( data, textStatus, jQxhr ){
+			  alert(""+data);
               if(data=='true'){
                 console.log("The file download is blocked. Canceling the file download");
                 chrome.downloads.cancel(item.id);
@@ -36,6 +37,7 @@ function Factory() { //Factory of FileExtension Objects
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log("An error has occurred. Details: responseText - "+
                 jqXhr.responseText + ", statusText - "+jqXhr.statusText);
+                //TODO cancel the download
             }
           });
           return bool;
@@ -70,6 +72,8 @@ try{
     var rule = rules[index];
      if (rule.enabled) {
        var ext = rule.ext_param;
+	   alert(ext);
+	   
        isBlocked = factory.createExtension(ext).blockFileIfNeeded(item);
        if(isBlocked){
          break;
