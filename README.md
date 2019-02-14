@@ -4,6 +4,8 @@
 
 ### Installation 
 * Clone the repo
-* Go to chrome://extensions
+* Go to chrome://extensions and enable developer mode. 
 * Click "Load unpacked extension..."
-* Select "plugin" directory form this project
+* Select "chromeExtension" directory form this project
+
+![alt text](/extension.PNG)
