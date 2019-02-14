@@ -1,4 +1,4 @@
-# A chrome extension that prevents users from downloading executable files in Chrome browser 
+# A chrome extension that prevents users from downloading files in Chrome browser according to their requirements
 
 ### It monitors each file downloaded in Chrome and use a cloud service to determine the downloaded file type. The extension invokes API Gateway on AWS cloud service which invokes lambda function which determines if the file is an executable one.
 
