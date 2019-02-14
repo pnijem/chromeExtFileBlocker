@@ -13,3 +13,8 @@
 * Click on details and open extension options
 
 ![alt text](/resources/images/extension_options.png)
+
+
+* Click on "New Rule" button, add ".exe" extension in order to block download of executable files.
+
+![alt text](/resources/images/executable_extension.png)
