@@ -8,4 +8,8 @@
 * Click "Load unpacked extension..."
 * Select "chromeExtension" directory form this project
 
-![alt text](/extension.PNG)
+![alt text](/resources/images/extension.PNG)
+
+* Click on details and open extension options
+
+![alt text](/resources/images/extension_options.PNG)
